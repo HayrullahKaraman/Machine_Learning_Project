@@ -42,7 +42,7 @@ input_df = pd.DataFrame({
 
 
 from joblib import load
-model=load("smap_mail_lr.pkl")
+model=load("Email_Spam_Nlp/smap_mail_lr.pkl")
 pred=model.predict([txt])
 pred_proba=model.predict_proba([txt])
 
