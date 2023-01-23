@@ -27,7 +27,7 @@ st.markdown("**Label** :  **Ham** : Mail is normal, **Spam**: Mail is spam")
 st.markdown("**Text** : The content of the mail")
 st.markdown("**Label_num** : Value is 0: Mail is normal , Valıue is 1: Mail is spam")
 st.header("Simple Dataset")
-df=pd.read_csv(r"C:\Users\masal\Documents\GitHub\Machine_Learning_Project\Email_Spam_Nlp\spam_ham_dataset.csv")
+df=pd.read_csv("spam_ham_dataset.csv")
 if st.checkbox("Dataset Show/Hide"):
   st.table(df.sample(3,random_state=42))
 
@@ -42,7 +42,7 @@ input_df = pd.DataFrame({
 
 
 from joblib import load
-model=load(r"C:\Users\masal\Documents\GitHub\Machine_Learning_Project\Email_Spam_Nlp\smap_mail_lr.pkl")
+model=load("smap_mail_lr.pkl")
 pred=model.predict([txt])
 pred_proba=model.predict_proba([txt])
 
